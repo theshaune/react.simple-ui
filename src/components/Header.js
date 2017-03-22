@@ -19,24 +19,14 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const Header = ({ logo, nav }) => (
+const Header = ({...props}) => (
   <Wrapper>
     <Container>
 
-      <HeaderLogo logo={logo} />
-      <HeaderNavigation nav={nav} />
+      <HeaderLogo {...props} />
+      <HeaderNavigation {...props} />
     </Container>
   </Wrapper>
 );
-
-Header.defaultProps = {
-  logo: null,
-  nav: []
-};
-
-Header.propTypes = {
-  logo: React.PropTypes.string,
-  nav: React.PropTypes.arrayOf(React.PropTypes.object)
-};
 
 export default Header;
