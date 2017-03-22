@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 
-
 const navItems = [
   {
     id: shortid.generate(),
@@ -14,12 +13,12 @@ const navItems = [
   {
     id: shortid.generate(),
     name: 'About',
-    link: 'about'
+    link: '/about'
   },
   {
     id: shortid.generate(),
     name: 'Store',
-    link: 'store/cat'
+    link: '/store/cat'
   }
 ];
 
