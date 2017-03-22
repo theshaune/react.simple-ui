@@ -1,18 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+// CSS Animation
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const Wrapper = styled.div`
   display: flex;
 `;
 
 const Img = styled.img`
-  animation: App-logo-spin infinite 20s linear;
+  animation: ${rotate360} infinite 20s linear;
   height: 80px;
-
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
 `;
 
 const HeaderLogo = ({ logo }) => {
