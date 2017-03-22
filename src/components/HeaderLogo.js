@@ -3,9 +3,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
-  
-  img {
-    width: 100px;
+`;
+
+const Img = styled.img`
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 `;
 
@@ -14,7 +20,7 @@ const HeaderLogo = ({ logo }) => {
 
   return (
     <Wrapper>
-      <img src={logo} className="imgSrc" alt="logo" />
+      <Img src={logo} className="imgSrc" alt="logo" />
     </Wrapper>
   );
 };
