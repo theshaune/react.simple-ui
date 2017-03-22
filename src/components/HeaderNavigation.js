@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.nav`
   display: flex;
@@ -17,7 +18,7 @@ const Wrapper = styled.nav`
 
 const HeaderNavigation = ({ nav }) => (
   <Wrapper>
-    {nav.map(({ name, link, id }) => <a key={id} href={link}>{name}</a>)}
+    {nav.map(({ name, link, id }) => <Link key={id} to={link}>{name}</Link>)}
   </Wrapper>
 );
 
