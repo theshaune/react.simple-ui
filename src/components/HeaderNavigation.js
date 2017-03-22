@@ -17,7 +17,7 @@ const Wrapper = styled.nav`
 
 const HeaderNavigation = ({ nav }) => (
   <Wrapper>
-    ... working on it: {JSON.stringify(nav)}
+    {nav.map(({ name, link }) => <a href={link}>{name}</a>)}
   </Wrapper>
 );
 
