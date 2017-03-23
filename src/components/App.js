@@ -1,8 +1,8 @@
 import React from 'react';
 import shortid from 'shortid';
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header';
+import logo from '../assets/logo.svg';
+import '../assets/app.css';
+import Header from './Header';
 
 const navItems = [
   {

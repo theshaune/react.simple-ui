@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import App from './App';
+import App from './components/App';
 
-const routes = () => (
+const Routes = () => (
   <div>
     <Route path="/" component={App} />
     <Switch>
@@ -19,4 +19,4 @@ const routes = () => (
   </div>
 );
 
-export default routes;
+export default Routes;
