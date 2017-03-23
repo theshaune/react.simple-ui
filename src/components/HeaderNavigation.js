@@ -16,14 +16,16 @@ const Wrapper = styled.nav`
   }
 `;
 
-const HeaderNavigation = ({ nav }) => (
+const HeaderNavigation = ({ nav, state }) => (
   <Wrapper>
+    <span>{ JSON.stringify(state) }</span>
     {nav.map(({ name, link, id }) => <Link key={id} to={link}>{name}</Link>)}
   </Wrapper>
 );
 
 HeaderNavigation.defaultProps = {
-  nav: []
+  nav: [],
+  state: {}
 };
 
 HeaderNavigation.propTypes = {
