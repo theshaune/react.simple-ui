@@ -1,10 +1,12 @@
+import { NAVIGATION_TOGGLE_SIDEBAR } from '../actions/actionTypes';
+
 const initialState = {
   isOpen: false
 };
 
-function navigation(state = initialState, action) {
+export default function navigation(state = initialState, action) {
   switch (action.type) {
-    case 'NAVIGATION_TOGGLE_SIDEBAR':
+    case NAVIGATION_TOGGLE_SIDEBAR:
       return {
         ...state,
         isOpen: !state.isOpen
@@ -13,5 +15,3 @@ function navigation(state = initialState, action) {
       return state;
   }
 }
-
-export default navigation;

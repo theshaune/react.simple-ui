@@ -1,9 +1,5 @@
-export const NAVIGATION_TOGGLE_SIDEBAR = 'NAVIGATION_TOGGLE_SIDEBAR';
+import { NAVIGATION_TOGGLE_SIDEBAR } from './actionTypes';
 
-function toggleNavigation(status) {
-  return {
-    type: NAVIGATION_TOGGLE_SIDEBAR
-  };
-}
-
-export default toggleNavigation;
+export const toggle = payload => ({
+  type: NAVIGATION_TOGGLE_SIDEBAR
+});

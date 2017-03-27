@@ -6,30 +6,39 @@ const Wrapper = styled.nav`
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
-
-  ul {
-    list-style-type: none;
-  }
-  
-  li {
-    margin-left: 1rem;
-  }
 `;
 
-const HeaderNavigation = ({ nav, state }) => (
+const List = styled.ul`
+  display: flex;
+  list-style-type: none;
+`;
+
+const ListItem = styled.li`
+  margin-left: 1rem;
+`;
+
+const HeaderNavigation = ({ nav, toggle }) => (
   <Wrapper>
-    <span>{ JSON.stringify(state) }</span>
-    {nav.map(({ name, link, id }) => <Link key={id} to={link}>{name}</Link>)}
+    <List>
+      {nav.map(({ name, link, id }) => (
+        <ListItem key={id}>
+          <Link to={link}>{name}</Link>
+        </ListItem>
+      ))}
+      <ListItem>
+        <button onClick={toggle}>Menu</button>
+      </ListItem>
+    </List>
   </Wrapper>
 );
 
 HeaderNavigation.defaultProps = {
-  nav: [],
-  state: {}
+  nav: []
 };
 
 HeaderNavigation.propTypes = {
-  nav: React.PropTypes.arrayOf(React.PropTypes.object)
+  nav: React.PropTypes.arrayOf(React.PropTypes.object),
+  toggle: React.PropTypes.func.isRequired
 };
 
 export default HeaderNavigation;
